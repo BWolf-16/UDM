@@ -24,21 +24,7 @@ Open native device properties
 
 ✅ Modern Windows 11 Flat Design
 
-📁 Folder Structure
-
-UltraDeviceManager/
-├── ui/
-│   ├── app.py              # Main GUI logic
-│   ├── device_card.py      # The DeviceCard component
-│   ├── filter_panel.py     # Filter/search panel UI
-├── core/
-│   ├── device_scanner.py   # Hardware device detection
-│   ├── status_controller.py# Enable/disable logic
-├── utils/
-│   ├── storage.py          # Metadata I/O
-├── metadata.json           # Saved user notes/tags/colors
-├── main.py                 # App launcher
-└── README.md               # You are here
+![alt text]({F0F81177-5C3C-47C2-8FE3-F3809D808526}.png)
 
 customtkinter
 
