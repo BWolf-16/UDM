@@ -1,1 +1,573 @@
-{}
+{
+    "SWD\\PRINTENUM\\{9ED31285-2C1B-407E-935A-A780E0CDE470}": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:15:59] Updated tag to 'e'",
+            "[2025-05-28 20:16:14] Updated tag to ''",
+            "[2025-05-28 20:16:19] Set label color to #1E88E5",
+            "[2025-05-28 20:16:27] Set label color to #C2185B",
+            "[2025-05-28 20:16:29] Set label color to #C2185B",
+            "[2025-05-28 20:16:57] Set label color to #000000",
+            "[2025-05-28 20:21:47] Updated tag to 'hi'",
+            "[2025-05-28 20:42:10] Updated tag to ''",
+            "[2025-05-28 20:46:50] Set label color to #43A047",
+            "[2025-05-28 20:46:51] Updated tag to 'Microsoft'"
+        ],
+        "text_color": "#43A047"
+    },
+    "USB\\VID_04FC&PID_7393&MI_01\\C&39348CDA&0&0001": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:17:13] Set label color to #C2185B",
+            "[2025-05-28 20:17:38] Updated tag to 'example'",
+            "[2025-05-28 20:29:34] Updated tag to 'LianLi'"
+        ],
+        "tag": "LianLi"
+    },
+    "USB\\VID_04FC&PID_7393&MI_01\\B&30930BFD&0&0001": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:17:14] Set label color to #C2185B",
+            "[2025-05-28 20:29:50] Updated tag to 'LianLi'"
+        ],
+        "tag": "LianLi"
+    },
+    "USB\\VID_04FC&PID_7393&MI_01\\B&2D137364&0&0001": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:17:15] Set label color to #C2185B",
+            "[2025-05-28 20:29:57] Updated tag to 'LianLi'"
+        ],
+        "tag": "LianLi"
+    },
+    "ROOT\\DISPLAY\\0000": {
+        "text_color": "#1E88E5",
+        "history": [
+            "[2025-05-28 20:38:06] Set label color to #1E88E5",
+            "[2025-05-28 20:38:18] Updated tag to 'Meta'"
+        ],
+        "tag": "Meta"
+    },
+    "SWD\\MMDEVAPI\\{0.0.0.00000000}.{75DCE328-AA36-4BCC-8FB6-D469A64D7B28}": {
+        "text_color": "#1E88E5",
+        "history": [
+            "[2025-05-28 20:38:39] Set label color to #1E88E5",
+            "[2025-05-28 20:38:46] Updated tag to 'Sony'"
+        ],
+        "tag": "Sony"
+    },
+    "HDAUDIO\\FUNC_01&VEN_1002&DEV_AA01&SUBSYS_00AA0100&REV_1008\\5&1A6972F4&0&0001": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:26] Set label color to #C2185B",
+            "[2025-05-28 20:41:35] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AMDIF031\\0": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:27] Set label color to #C2185B",
+            "[2025-05-28 20:41:36] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "PCI\\VEN_1022&DEV_1649&SUBSYS_88771043&REV_00\\4&1EBE6A9C&0&0241": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:29] Set label color to #C2185B",
+            "[2025-05-28 20:41:38] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ROOT\\AMDXE\\0000": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:30] Set label color to #C2185B",
+            "[2025-05-28 20:41:40] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AMDI0030\\0": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:31] Set label color to #C2185B",
+            "[2025-05-28 20:41:41] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "SWD\\DRIVERENUM\\AMDFDANS&5&69CF045&0": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:32] Set label color to #C2185B",
+            "[2025-05-28 20:41:43] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "PCI\\VEN_1022&DEV_15B7&SUBSYS_88771043&REV_00\\4&1EBE6A9C&0&0441": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:33] Set label color to #C2185B",
+            "[2025-05-28 20:41:45] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "SWD\\DRIVERENUM\\AMDWIN&5&69CF045&0": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:35] Set label color to #C2185B",
+            "[2025-05-28 20:41:46] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "PCI\\VEN_1002&DEV_164E&SUBSYS_88771043&REV_C6\\4&1EBE6A9C&0&0041": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:37] Set label color to #C2185B",
+            "[2025-05-28 20:41:48] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "PCI\\VEN_1022&DEV_15B6&SUBSYS_88771043&REV_00\\4&1EBE6A9C&0&0341": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:38] Set label color to #C2185B",
+            "[2025-05-28 20:41:21] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "SWD\\DRIVERENUM\\AMDOCL&5&69CF045&0": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:39] Set label color to #C2185B",
+            "[2025-05-28 20:41:19] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "SWD\\DRIVERENUM\\AMDUWP&5&69CF045&0": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:41] Set label color to #C2185B",
+            "[2025-05-28 20:41:18] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "PCI\\VEN_1022&DEV_790B&SUBSYS_88771043&REV_71\\3&11583659&0&A0": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:42] Set label color to #C2185B",
+            "[2025-05-28 20:41:16] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ROOT\\AMDLOG\\0000": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:43] Set label color to #C2185B",
+            "[2025-05-28 20:41:14] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AMDI0010\\0": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:45] Set label color to #C2185B",
+            "[2025-05-28 20:41:09] Updated tag to 'AMD'",
+            "[2025-05-28 20:41:11] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "PCI\\VEN_1022&DEV_43F7&SUBSYS_33281B21&REV_01\\6&2AF91C3C&0&00600011": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:46] Set label color to #C2185B",
+            "[2025-05-28 20:40:55] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\0": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:47] Set label color to #C2185B",
+            "[2025-05-28 20:40:53] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\1": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:48] Set label color to #C2185B",
+            "[2025-05-28 20:40:52] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\2": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:50] Set label color to #C2185B",
+            "[2025-05-28 20:40:50] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\3": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:51] Set label color to #C2185B",
+            "[2025-05-28 20:40:44] Set label color to #F4511E",
+            "[2025-05-28 20:40:47] Set label color to #C2185B",
+            "[2025-05-28 20:40:48] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\4": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:52] Set label color to #C2185B",
+            "[2025-05-28 20:40:43] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\5": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:53] Set label color to #C2185B",
+            "[2025-05-28 20:40:37] Updated tag to 'AMD'",
+            "[2025-05-28 20:40:38] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\6": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:54] Set label color to #C2185B",
+            "[2025-05-28 20:40:30] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\7": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:55] Set label color to #C2185B",
+            "[2025-05-28 20:40:28] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\8": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:56] Set label color to #C2185B",
+            "[2025-05-28 20:40:27] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\9": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:57] Set label color to #C2185B",
+            "[2025-05-28 20:40:25] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\A": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:39:58] Set label color to #C2185B",
+            "[2025-05-28 20:40:24] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AUTHENTICAMD_-_AMD64_FAMILY_25_MODEL_97_-_AMD_RYZEN_5_7600_6-CORE_PROCESSOR______________\\B": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:40:00] Set label color to #C2185B",
+            "[2025-05-28 20:40:18] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "PCI\\VEN_1022&DEV_15B8&SUBSYS_88771043&REV_00\\4&89701DF&0&0043": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:40:01] Set label color to #C2185B",
+            "[2025-05-28 20:40:15] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ACPI\\AMDI0052\\2&DABA3FF&0": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 20:40:04] Set label color to #C2185B",
+            "[2025-05-28 20:40:12] Updated tag to 'AMD'"
+        ],
+        "tag": "AMD"
+    },
+    "ROOT\\UNNAMED_DEVICE\\0000": {
+        "text_color": "#43A047",
+        "history": [
+            "[2025-05-28 20:42:54] Set label color to #43A047",
+            "[2025-05-28 20:43:02] Updated tag to 'NVIDIA'"
+        ],
+        "tag": "NVIDIA"
+    },
+    "PCI\\VEN_10DE&DEV_2782&SUBSYS_17AF10DE&REV_A1\\4&1BABDF5B&0&0009": {
+        "text_color": "#43A047",
+        "history": [
+            "[2025-05-28 20:42:55] Set label color to #43A047",
+            "[2025-05-28 20:43:03] Updated tag to 'NVIDIA'"
+        ],
+        "tag": "NVIDIA"
+    },
+    "HDAUDIO\\FUNC_01&VEN_10DE&DEV_00A5&SUBSYS_10DE17AF&REV_1001\\5&11128D3D&0&0001": {
+        "text_color": "#43A047",
+        "history": [
+            "[2025-05-28 20:42:56] Set label color to #43A047",
+            "[2025-05-28 20:43:03] Updated tag to 'NVIDIA'"
+        ],
+        "tag": "NVIDIA"
+    },
+    "BTHENUM\\DEV_AC800A2DDDBC\\B&2C5E5DB7&0&BLUETOOTHDEVICE_AC800A2DDDBC": {
+        "text_color": "#1E88E5",
+        "history": [
+            "[2025-05-28 20:44:54] Set label color to #1E88E5",
+            "[2025-05-28 20:44:55] Updated tag to 'Sony'"
+        ],
+        "tag": "Sony"
+    },
+    "BTHENUM\\{0000110C-0000-1000-8000-00805F9B34FB}_VID&0002054C_PID&0DF0\\B&2C5E5DB7&0&AC800A2DDDBC_C00000000": {
+        "text_color": "#1E88E5",
+        "history": [
+            "[2025-05-28 20:45:01] Set label color to #1E88E5",
+            "[2025-05-28 20:45:06] Updated tag to 'Sony'"
+        ],
+        "tag": "Sony"
+    },
+    "USB\\VID_1E71&PID_300C&MI_00\\9&2766A1FE&0&0000": {
+        "tag": "NZXT",
+        "history": [
+            "[2025-05-28 20:45:30] Updated tag to 'NZXT'"
+        ]
+    },
+    "ROOT\\VMBUS\\0000": {
+        "text_color": "#43A047",
+        "history": [
+            "[2025-05-28 20:46:56] Set label color to #43A047",
+            "[2025-05-28 20:46:56] Updated tag to 'Microsoft'"
+        ],
+        "tag": "Microsoft"
+    },
+    "ROOT\\BASICDISPLAY\\0000": {
+        "text_color": "#43A047",
+        "history": [
+            "[2025-05-28 20:46:59] Set label color to #43A047",
+            "[2025-05-28 20:47:01] Updated tag to 'Microsoft'"
+        ],
+        "tag": "Microsoft"
+    },
+    "ROOT\\HVSERVICE\\0000": {
+        "text_color": "#43A047",
+        "history": [
+            "[2025-05-28 20:47:03] Set label color to #43A047",
+            "[2025-05-28 20:47:06] Updated tag to 'Microsoft'"
+        ],
+        "tag": "Microsoft"
+    },
+    "SWD\\MSRRAS\\{5E259276-BC7E-40E3-B93B-8F89B5F3ABC0}": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:08] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:30] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ROOT\\VID\\0000": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:09] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:29] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ROOT\\VDRVROOT\\0000": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:11] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:27] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ROOT\\SPACEPORT\\0000": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:12] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:26] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ROOT\\KDNIC\\0000": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:13] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:22] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ACPI\\PNP0C14\\ASUSMBSWINTERFACE": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:15] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:21] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ROOT\\VKRNLINTVSP\\0000": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:17] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:19] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "SWD\\RADIO\\{3DB5895D-CC28-44B3-AD3D-6F01A782B8D2}": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:20] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:18] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "SWD\\MSDAS\\{CE958E9A-424F-4C88-86F4-11314821E75A}": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:22] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:17] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ACPI\\PNP0C14\\AOD": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:23] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:15] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ACPI\\PNP0C14\\ATK": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:25] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:13] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ACPI\\PNP0C14\\AWW": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:27] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:12] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ROOT\\VPCIVSP\\0000": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:28] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:10] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ACPI_HAL\\PNP0C08\\0": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:30] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:09] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ROOT\\BASICRENDER\\0000": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:32] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:08] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ACPI_HAL\\UEFI\\0": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:33] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:04] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ACPI\\PNP0C14\\ASUSBACKUPWMI": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:35] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:03] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "BTH\\MS_BTHBRB\\A&C0363DF&0&1": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:38] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:01] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\\VWIFIMP_WFD\\7&1B4D84E5&0&11": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:40] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:48:00] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "{5D624F94-8850-40C3-A3FA-A4FD2080BAF3}\\VWIFIMP_WFD\\7&1B4D84E5&0&12": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:41] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:47:59] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ROOT\\STORVSP\\0000": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:43] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:47:58] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "BTH\\MS_BTHLE\\A&C0363DF&0&3": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:45] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:47:56] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "SWD\\MMDEVAPI\\MICROSOFTGSWAVETABLESYNTH": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:47] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:47:55] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "{8E7BD593-6E6C-4C52-86A6-77175494DD8E}\\MSVHDHBA\\1&3030E83&0&01": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:48] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:47:54] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    },
+    "ROOT\\MSSMBIOS\\0000": {
+        "tag": "Microsoft",
+        "history": [
+            "[2025-05-28 20:47:51] Updated tag to 'Microsoft'",
+            "[2025-05-28 20:47:52] Set label color to #43A047"
+        ],
+        "text_color": "#43A047"
+    }
+}

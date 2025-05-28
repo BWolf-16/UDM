@@ -8,12 +8,13 @@ import os
 import wmi
 
 class DeviceCard(ctk.CTkFrame):
-    def __init__(self, parent, device, metadata, filter_callback=None):
+    def __init__(self, parent, device, metadata, filter_callback=None, tag_update_callback=None):
         super().__init__(parent, corner_radius=12)
         self.device = device
         self.metadata = metadata
         self.device_meta = self.metadata.get(device['device_id'], {})
         self.filter_callback = filter_callback
+        self.tag_update_callback = tag_update_callback
 
         self.nickname = self.device_meta.get("nickname", device['name'])
         self.text_color = self.device_meta.get("text_color", "#000000")
@@ -119,6 +120,8 @@ class DeviceCard(ctk.CTkFrame):
             self.tag_button.configure(text=f"🏷 {new_tag or 'Set Tag'}")
             self.add_history(f"Updated tag to '{new_tag}'")
             self.tag_edit.destroy()
+            if self.tag_update_callback:
+                self.tag_update_callback()
 
         ctk.CTkButton(self.tag_edit, text="Save", command=save).pack(side='left')
 
