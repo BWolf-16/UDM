@@ -25,9 +25,7 @@ Open native device properties
 ✅ Modern Windows 11 Flat Design
 
 📁 Folder Structure
-bash
-Copy
-Edit
+
 UltraDeviceManager/
 ├── ui/
 │   ├── app.py              # Main GUI logic
@@ -41,8 +39,6 @@ UltraDeviceManager/
 ├── metadata.json           # Saved user notes/tags/colors
 ├── main.py                 # App launcher
 └── README.md               # You are here
-🛠 Requirements
-Python 3.10+
 
 customtkinter
 
