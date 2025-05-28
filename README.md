@@ -6,14 +6,19 @@ Inspired by the native Device Manager — but redesigned for clarity, modularity
 ✨ Features
 ✅ Live Filter & Search (partial match support)
 
+![alt text]({3032164C-7A7C-4D69-B23B-F1C85105AA8A}.png)
 ✅ Status Control (Enable / Disable / Restart devices)
 
-✅ Custom Tags & Metadata
 
+✅ Custom Tags & Metadata
+![alt text]({3ED24A82-50B7-4398-99C5-C794D213B369}.png)
 ✅ Inline Notes & Label Coloring (click device name to edit)
-![alt text]({BD99FCC2-11DB-4EF3-8CDD-F532D07BC521}.png)
+
+![alt text]({1AB1AA93-72A5-4D57-87F8-646095D13463}.png)
 
 ✅ Windows-like Advanced Actions
+
+![alt text]({E51298E5-F690-4832-8CA8-C98A1B28E73E}.png)
 
 Open driver folder
 
@@ -25,7 +30,7 @@ Open native device properties
 
 ✅ Modern Windows 11 Flat Design
 
-![alt text]({F0F81177-5C3C-47C2-8FE3-F3809D808526}.png)
+![alt text]({FCB22EE1-ACBB-427E-9501-48E446321B77}.png)
 
 customtkinter
 

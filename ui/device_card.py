@@ -17,7 +17,7 @@ class DeviceCard(ctk.CTkFrame):
         self.tag_update_callback = tag_update_callback
 
         self.nickname = self.device_meta.get("nickname", device['name'])
-        self.text_color = self.device_meta.get("text_color", "#000000")
+        self.text_color = self.device_meta.get("text_color", "#ffffff")
         self.tag = self.device_meta.get("tag", "")
 
         self.configure(border_color="#AAAAAA", border_width=1)
@@ -27,14 +27,13 @@ class DeviceCard(ctk.CTkFrame):
         self.label.grid(row=0, column=0, sticky='w', padx=15, pady=(10, 5))
         self.label.bind("<Button-1>", lambda e: self.toggle_color_section())
 
-        self.status_button = ctk.CTkButton(self, text=f"📊 Status: {device['status']}", width=130,
-                                           fg_color=self.status_color(device['status']),
-                                           command=self.toggle_status_menu)
-        self.status_button.grid(row=0, column=1, sticky='e', padx=10)
+        self.status_label = ctk.CTkButton(self, text=self.get_status_label(), width=130,
+                                          fg_color=self.status_color(self.device['status']), command=self.show_status_actions)
+        self.status_label.grid(row=0, column=1, sticky='e', padx=10)
 
         self.tag_button = ctk.CTkButton(self, text=f"🏷 {self.tag or 'Set Tag'}", width=100,
-                                        fg_color=self.text_color, text_color="#ffffff",
-                                        command=self.edit_tag)
+                                        fg_color=self.text_color if self.text_color != "#ffffff" else "#1E88E5",
+                                        text_color="#ffffff", command=self.edit_tag)
         self.tag_button.grid(row=0, column=2, sticky='e', padx=10)
 
         self.advanced_toggle = ctk.CTkButton(self, text="⚙️ Advanced ▼", width=100, command=self.toggle_advanced)
@@ -46,31 +45,53 @@ class DeviceCard(ctk.CTkFrame):
         self.add_color_buttons()
 
         self.advanced_section = ctk.CTkFrame(self)
-        self.advanced_section.grid(row=2, column=0, columnspan=4, sticky='ew', padx=15, pady=(0, 5))
+        self.advanced_section.grid(row=1, column=0, columnspan=4, sticky='ew', padx=15, pady=0)
         self.advanced_section.grid_remove()
-        ctk.CTkButton(self.advanced_section, text="📂 Open Driver Folder", command=self.open_driver_folder).pack(padx=5, pady=2)
-        ctk.CTkButton(self.advanced_section, text="🧬 Registry Location", command=self.open_registry_location).pack(padx=5, pady=2)
-        ctk.CTkButton(self.advanced_section, text="⚙️ Device Properties", command=self.open_device_properties).pack(padx=5, pady=2)
+        self.add_advanced_buttons()
+
+    def get_status_label(self):
+        s = self.device['status'].lower()
+        if "disable" in s:
+            return "❌ Disabled"
+        elif "ok" in s or "enable" in s or "working" in s:
+            return "✔ Enabled"
+        return "⚠ Unknown"
 
     def status_color(self, status):
         s = status.lower()
-        if "ok" in s or "working" in s:
+        if "ok" in s or "working" in s or "enable" in s:
             return "#4CAF50"
-        elif "warning" in s or "degraded" in s:
-            return "#FFC107"
-        elif "error" in s or "disabled" in s:
+        elif "disable" in s:
             return "#F44336"
         return "#9E9E9E"
 
-    def toggle_status_menu(self):
-        status = self.device['status']
-        if "disable" not in status.lower():
-            disable_device(self.device['device_id'])
+    def show_status_actions(self):
+        if hasattr(self, "status_menu") and self.status_menu.winfo_exists():
+            self.status_menu.destroy()
+            return
+
+        self.status_menu = ctk.CTkFrame(self)
+        self.status_menu.grid(row=2, column=1, sticky='e', padx=10, pady=5)
+
+        def act(label, func):
+            try:
+                func(self.device['device_id'])
+                self.device['status'] = label
+                self.status_label.configure(text=self.get_status_label(), fg_color=self.status_color(label))
+                self.add_history(f"Device {label.lower()}")
+            except Exception as e:
+                self.status_label.configure(text="⚠ Failed")
+                self.add_history(f"Failed: {e}")
+            self.status_menu.destroy()
+            if self.filter_callback:
+                self.filter_callback()
+
+        current = self.device['status'].lower()
+        if "disable" in current:
+            ctk.CTkButton(self.status_menu, text="🟢 Enable Device", command=lambda: act("Enabled", enable_device)).pack(padx=5, pady=2)
         else:
-            enable_device(self.device['device_id'])
-        self.add_history("Toggled device status")
-        if self.filter_callback:
-            self.filter_callback()
+            ctk.CTkButton(self.status_menu, text="🔴 Disable Device", command=lambda: act("Disabled", disable_device)).pack(padx=5, pady=2)
+        ctk.CTkButton(self.status_menu, text="🔁 Restart Device", command=lambda: act("Restarted", restart_device)).pack(padx=5, pady=2)
 
     def toggle_color_section(self):
         if self.color_section.winfo_ismapped():
@@ -85,7 +106,7 @@ class DeviceCard(ctk.CTkFrame):
             self.advanced_section.grid()
 
     def add_color_buttons(self):
-        colors = ["#000000", "#1E88E5", "#C2185B", "#43A047", "#FDD835", "#F4511E"]
+        colors = ["#ffffff", "#1E88E5", "#C2185B", "#43A047", "#FDD835", "#F4511E"]
         for c in colors:
             ctk.CTkButton(self.color_section, text=c, text_color=c, fg_color="transparent",
                           command=lambda col=c: self.set_text_color(col)).pack(side="left", padx=5, pady=5)
@@ -99,13 +120,24 @@ class DeviceCard(ctk.CTkFrame):
         self.tag_button.configure(fg_color=color)
         self.add_history(f"Set label color to {color}")
 
+    def add_advanced_buttons(self):
+        actions = [
+            ("📂", self.open_driver_folder),
+            ("🧬", self.open_registry_location),
+            ("⚙️", self.open_device_properties),
+            ("🔄", self.refresh_device),
+            ("🔍", self.search_driver_update),
+        ]
+        for icon, cmd in actions:
+            ctk.CTkButton(self.advanced_section, text=icon, width=40, height=32, command=cmd).pack(side="right", padx=4, pady=2)
+
     def edit_tag(self):
         if hasattr(self, "tag_edit") and self.tag_edit.winfo_exists():
             self.tag_edit.destroy()
             return
 
         self.tag_edit = ctk.CTkFrame(self)
-        self.tag_edit.grid(row=1, column=2, columnspan=2, sticky='e', padx=10, pady=5)
+        self.tag_edit.grid(row=2, column=2, columnspan=2, sticky='e', padx=10, pady=5)
 
         entry = ctk.CTkEntry(self.tag_edit, width=150)
         entry.insert(0, self.tag)
@@ -148,6 +180,14 @@ class DeviceCard(ctk.CTkFrame):
 
     def open_device_properties(self):
         subprocess.run(["devmgmt.msc"], shell=True)
+
+    def refresh_device(self):
+        subprocess.run("pnputil /scan-devices", shell=True)
+        self.add_history("Refreshed device list")
+
+    def search_driver_update(self):
+        subprocess.run("ms-settings:windowsupdate", shell=True)
+        self.add_history("Opened driver update UI")
 
     def add_history(self, event):
         now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

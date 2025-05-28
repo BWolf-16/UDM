@@ -28,7 +28,7 @@ class FilterPanel(ctk.CTkFrame):
         self.status_menu = ctk.CTkOptionMenu(
             self,
             variable=self.status_var,
-            values=["All", "OK", "Warning", "Disabled", "Degraded", "Unknown"]
+            values=["All", "Enable", "Warning", "Disabled", "Degraded", "Unknown"]
         )
         self.status_menu.set("All")
         self.status_menu.grid(row=0, column=5, padx=(0, 10), pady=10, sticky="ew")

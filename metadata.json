@@ -11,7 +11,15 @@
             "[2025-05-28 20:21:47] Updated tag to 'hi'",
             "[2025-05-28 20:42:10] Updated tag to ''",
             "[2025-05-28 20:46:50] Set label color to #43A047",
-            "[2025-05-28 20:46:51] Updated tag to 'Microsoft'"
+            "[2025-05-28 20:46:51] Updated tag to 'Microsoft'",
+            "[2025-05-28 21:32:32] Device enabled",
+            "[2025-05-28 21:32:34] Device disabled",
+            "[2025-05-28 21:44:28] Opened driver update UI",
+            "[2025-05-28 21:44:36] Refreshed device list",
+            "[2025-05-28 21:52:43] Updated tag to 'Microsoft'",
+            "[2025-05-28 21:53:10] Refreshed device list",
+            "[2025-05-28 21:53:13] Opened driver update UI",
+            "[2025-05-28 21:53:14] Refreshed device list"
         ],
         "text_color": "#43A047"
     },
@@ -733,6 +741,14 @@
         "tag": "Roland",
         "history": [
             "[2025-05-28 21:16:36] Updated tag to 'Roland'"
+        ]
+    },
+    "ACPI\\PNP0C02\\0": {
+        "history": [
+            "[2025-05-28 21:25:50] Toggled device status",
+            "[2025-05-28 21:44:10] Opened driver update UI",
+            "[2025-05-28 21:44:12] Opened driver update UI",
+            "[2025-05-28 21:44:21] Opened driver update UI"
         ]
     }
 }
