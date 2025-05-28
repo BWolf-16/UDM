@@ -1,3 +1,4 @@
+# ui/filter_panel.py
 import customtkinter as ctk
 
 class FilterPanel(ctk.CTkFrame):
@@ -13,12 +14,12 @@ class FilterPanel(ctk.CTkFrame):
 
         # Search
         ctk.CTkLabel(self, text="🔍", font=("Segoe UI", 14)).grid(row=0, column=0, padx=(10, 5), sticky="e")
-        self.search_entry = ctk.CTkEntry(self, textvariable=self.search_var, placeholder_text="Search name...")
+        self.search_entry = ctk.CTkEntry(self, textvariable=self.search_var, placeholder_text="Search device name...")
         self.search_entry.grid(row=0, column=1, padx=(0, 10), pady=10, sticky="ew")
 
         # Tag
         ctk.CTkLabel(self, text="🏷️", font=("Segoe UI", 14)).grid(row=0, column=2, padx=(10, 5), sticky="e")
-        self.tag_entry = ctk.CTkEntry(self, textvariable=self.tag_var, placeholder_text="Filter tag only...")
+        self.tag_entry = ctk.CTkEntry(self, textvariable=self.tag_var, placeholder_text="Filter by tag...")
         self.tag_entry.grid(row=0, column=3, padx=(0, 10), pady=10, sticky="ew")
 
         # Status
