@@ -106,7 +106,7 @@ class DeviceCard(ctk.CTkFrame):
             self.advanced_section.grid()
 
     def add_color_buttons(self):
-        colors = ["#ffffff", "#1E88E5", "#C2185B", "#43A047", "#FDD835", "#F4511E","#51007A"]
+        colors = ["#ffffff", "#1E88E5", "#C2185B", "#43A047", "#FDD835", "#F4511E","#AC05FF"]
         for c in colors:
             ctk.CTkButton(self.color_section, text=c, text_color=c, fg_color="transparent",
                           command=lambda col=c: self.set_text_color(col)).pack(side="left", padx=5, pady=5)
