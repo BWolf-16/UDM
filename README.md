@@ -11,6 +11,7 @@ Inspired by the native Device Manager — but redesigned for clarity, modularity
 ✅ Custom Tags & Metadata
 
 ✅ Inline Notes & Label Coloring (click device name to edit)
+![alt text]({BD99FCC2-11DB-4EF3-8CDD-F532D07BC521}.png)
 
 ✅ Windows-like Advanced Actions
 
