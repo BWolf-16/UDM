@@ -32,7 +32,7 @@ def launch_app():
             match = (
                 (not filters['search'] or filters['search'] in name) and
                 (not filters['tag'] or filters['tag'] in tag) and
-                (not filters['status'] or filters['status'] in status)
+                (filters['status'] == 'all' or filters['status'] in status)
             )
 
             if not any_filter or match:

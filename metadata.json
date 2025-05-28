@@ -602,5 +602,137 @@
             "[2025-05-28 20:47:52] Set label color to #43A047"
         ],
         "text_color": "#43A047"
+    },
+    "HID\\VID_0B05&PID_1A70&MI_02&COL04\\A&17BB25BB&0&0003": {
+        "tag": "Asus",
+        "history": [
+            "[2025-05-28 21:11:18] Updated tag to 'Asus'",
+            "[2025-05-28 21:11:20] Set label color to #C2185B"
+        ],
+        "text_color": "#C2185B"
+    },
+    "HID\\VID_0B05&PID_1A70&MI_01\\A&3B92637D&0&0000": {
+        "tag": "Asus",
+        "history": [
+            "[2025-05-28 21:11:18] Updated tag to 'Asus'",
+            "[2025-05-28 21:11:21] Set label color to #C2185B"
+        ],
+        "text_color": "#C2185B"
+    },
+    "SWD\\COMPUTER\\MFG_ASUS&FAM_TO_BE_FILLED_BY_O.E.M.&PROD_SYSTEM_PRODUCT_NAME&SKU_SKU": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 21:11:29] Set label color to #C2185B",
+            "[2025-05-28 21:11:33] Updated tag to 'Asus'"
+        ],
+        "tag": "Asus"
+    },
+    "BTHENUM\\DEV_EC8350F821CD\\B&2C5E5DB7&0&BLUETOOTHDEVICE_EC8350F821CD": {
+        "text_color": "#43A047",
+        "history": [
+            "[2025-05-28 21:12:49] Set label color to #43A047",
+            "[2025-05-28 21:12:51] Updated tag to 'Microsoft'"
+        ],
+        "tag": "Microsoft"
+    },
+    "SWD\\MMDEVAPI\\MIDII_E2513CD2.P_0000": {
+        "tag": "Roland",
+        "history": [
+            "[2025-05-28 21:13:13] Updated tag to 'Roland'"
+        ]
+    },
+    "SWD\\MMDEVAPI\\MIDII_E2513CD2.P_0002": {
+        "tag": "Roland",
+        "history": [
+            "[2025-05-28 21:13:14] Updated tag to 'Roland'"
+        ]
+    },
+    "SWD\\MMDEVAPI\\{0.0.1.00000000}.{7854540A-C822-424E-BE6C-6A0259842151}": {
+        "tag": "Roland",
+        "history": [
+            "[2025-05-28 21:13:46] Updated tag to 'Roland'"
+        ]
+    },
+    "BTHENUM\\{0000110E-0000-1000-8000-00805F9B34FB}_VID&0002054C_PID&0DF0\\B&2C5E5DB7&0&AC800A2DDDBC_C00000000": {
+        "text_color": "#1E88E5",
+        "history": [
+            "[2025-05-28 21:14:08] Set label color to #1E88E5",
+            "[2025-05-28 21:14:09] Updated tag to 'Sony'"
+        ],
+        "tag": "Sony"
+    },
+    "SWD\\MMDEVAPI\\{0.0.0.00000000}.{67C60241-62EB-46D0-BB4A-E94A974DFB74}": {
+        "tag": "Roland",
+        "history": [
+            "[2025-05-28 21:14:19] Updated tag to 'Roland'"
+        ]
+    },
+    "SCSI\\DISK&VEN_NVME&PROD_CT2000P2SSD8\\5&5720932&0&000000": {
+        "tag": "Micron",
+        "history": [
+            "[2025-05-28 21:14:28] Updated tag to 'Micron'"
+        ]
+    },
+    "USB\\VID_0582&PID_021A\\8&1199C2A1&0&6": {
+        "tag": "Roland",
+        "history": [
+            "[2025-05-28 21:14:57] Updated tag to 'Roland'"
+        ]
+    },
+    "BTHENUM\\{0000111E-0000-1000-8000-00805F9B34FB}_VID&0002054C_PID&0DF0\\B&2C5E5DB7&0&AC800A2DDDBC_C00000000": {
+        "text_color": "#1E88E5",
+        "history": [
+            "[2025-05-28 21:15:05] Set label color to #1E88E5",
+            "[2025-05-28 21:15:06] Updated tag to 'Sony'"
+        ],
+        "tag": "Sony"
+    },
+    "BTHENUM\\{0000110B-0000-1000-8000-00805F9B34FB}_VID&0002054C_PID&0DF0\\B&2C5E5DB7&0&AC800A2DDDBC_C00000000": {
+        "text_color": "#1E88E5",
+        "history": [
+            "[2025-05-28 21:15:17] Set label color to #1E88E5",
+            "[2025-05-28 21:15:18] Updated tag to 'Sony'"
+        ],
+        "tag": "Sony"
+    },
+    "SCSI\\DISK&VEN_NVME&PROD_CT2000P5PSSD8\\5&228DCD4A&0&000000": {
+        "tag": "Micron",
+        "history": [
+            "[2025-05-28 21:15:29] Updated tag to 'Micron'"
+        ]
+    },
+    "USB\\VID_0B05&PID_19AF&MI_00\\9&DE2EAF5&0&0000": {
+        "text_color": "#C2185B",
+        "history": [
+            "[2025-05-28 21:15:45] Set label color to #C2185B",
+            "[2025-05-28 21:15:46] Updated tag to 'Asus'"
+        ],
+        "tag": "Asus"
+    },
+    "SWD\\MMDEVAPI\\{0.0.1.00000000}.{3C894BC2-AE7E-45DB-AD1E-E320178C5AF2}": {
+        "tag": "Roland",
+        "history": [
+            "[2025-05-28 21:16:02] Updated tag to 'Roland'"
+        ]
+    },
+    "BTHHFENUM\\BTHHFPAUDIO\\C&35382262&0&97": {
+        "text_color": "#1E88E5",
+        "history": [
+            "[2025-05-28 21:16:12] Set label color to #1E88E5",
+            "[2025-05-28 21:16:13] Updated tag to 'Sony'"
+        ],
+        "tag": "Sony"
+    },
+    "SWD\\MMDEVAPI\\{0.0.0.00000000}.{55C2C3D0-E78C-464D-8156-F1C2AC6CAEE4}": {
+        "tag": "Roland",
+        "history": [
+            "[2025-05-28 21:16:24] Updated tag to 'Roland'"
+        ]
+    },
+    "SWD\\MMDEVAPI\\{0.0.1.00000000}.{CC7F2736-92C2-46EA-B17D-ABBE479A832A}": {
+        "tag": "Roland",
+        "history": [
+            "[2025-05-28 21:16:36] Updated tag to 'Roland'"
+        ]
     }
 }

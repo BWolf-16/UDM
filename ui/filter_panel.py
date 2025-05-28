@@ -8,7 +8,7 @@ class FilterPanel(ctk.CTkFrame):
 
         self.search_var = ctk.StringVar(value="")
         self.tag_var = ctk.StringVar(value="")
-        self.status_var = ctk.StringVar(value="OK")
+        self.status_var = ctk.StringVar(value="All")
 
         self.grid_columnconfigure((1, 3, 5), weight=1)
 
@@ -28,9 +28,9 @@ class FilterPanel(ctk.CTkFrame):
         self.status_menu = ctk.CTkOptionMenu(
             self,
             variable=self.status_var,
-            values=["", "OK", "Warning", "Disabled", "Degraded", "Unknown"]
+            values=["All", "OK", "Warning", "Disabled", "Degraded", "Unknown"]
         )
-        self.status_menu.set("OK")
+        self.status_menu.set("All")
         self.status_menu.grid(row=0, column=5, padx=(0, 10), pady=10, sticky="ew")
 
         # Buttons
@@ -52,8 +52,8 @@ class FilterPanel(ctk.CTkFrame):
         self.search_var.set("")
         self.tag_var.set("")
         self.tag_menu.set("")
-        self.status_var.set("OK")
-        self.status_menu.set("OK")
+        self.status_var.set("All")
+        self.status_menu.set("All")
         self.on_filter({
             "search": self.search_var.get().strip().lower(),
             "tag": self.tag_var.get().strip().lower(),
@@ -61,6 +61,6 @@ class FilterPanel(ctk.CTkFrame):
         })
 
     def update_tags(self, tags):
-        unique_tags = sorted(set(t for t in tags if t.strip()))
+        unique_tags = sorted(set(t for t in tags if t.strip()), key=lambda x: x.lower())
         self.tag_menu.configure(values=[""] + unique_tags)
         self.tag_menu.set("")
