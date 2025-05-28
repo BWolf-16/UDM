@@ -1,5 +1,5 @@
 🖥️ Ultra Device Manager
-Ultra Device Manager is a modern, customizable device interface manager for Windows, built with CustomTkinter.
+is a modern, customizable device interface manager for Windows, built with CustomTkinter.
 Inspired by the native Device Manager — but redesigned for clarity, modularity, and aesthetics.
 
 
