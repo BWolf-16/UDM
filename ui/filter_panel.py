@@ -6,9 +6,9 @@ class FilterPanel(ctk.CTkFrame):
         super().__init__(parent, corner_radius=12)
         self.on_filter = on_filter
 
-        self.search_var = ctk.StringVar()
-        self.tag_var = ctk.StringVar()
-        self.status_var = ctk.StringVar()
+        self.search_var = ctk.StringVar(value="")
+        self.tag_var = ctk.StringVar(value="")
+        self.status_var = ctk.StringVar(value="")
 
         self.grid_columnconfigure((1, 3, 5), weight=1)
 
@@ -29,6 +29,7 @@ class FilterPanel(ctk.CTkFrame):
             variable=self.status_var,
             values=["", "OK", "Warning", "Disabled", "Degraded", "Unknown"]
         )
+        self.status_menu.set("Select status...")
         self.status_menu.grid(row=0, column=5, padx=(0, 10), pady=10, sticky="ew")
 
         # Apply Button
