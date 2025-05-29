@@ -1,1 +1,8 @@
-{}
+{
+    "PCI\\VEN_1022&DEV_790E&SUBSYS_16021043&REV_51\\3&11583659&0&A3": {
+        "tag": "test",
+        "history": [
+            "[2025-05-29 11:50:23] Updated tag to 'test'"
+        ]
+    }
+}

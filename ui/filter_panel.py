@@ -1,10 +1,10 @@
-# ui/filter_panel.py
 import customtkinter as ctk
 
 class FilterPanel(ctk.CTkFrame):
-    def __init__(self, parent, on_filter):
+    def __init__(self, parent, apply_filters_callback=None, clear_callback=None):
         super().__init__(parent, corner_radius=12)
-        self.on_filter = on_filter
+        self.apply_filters_callback = apply_filters_callback
+        self.clear_callback = clear_callback
 
         self.search_var = ctk.StringVar(value="")
         self.tag_var = ctk.StringVar(value="")
@@ -28,7 +28,7 @@ class FilterPanel(ctk.CTkFrame):
         self.status_menu = ctk.CTkOptionMenu(
             self,
             variable=self.status_var,
-            values=["All", "Enable", "Warning", "Disabled", "Degraded", "Unknown"]
+            values=["All", "Enabled", "Warning", "Disabled", "Degraded", "Unknown"]
         )
         self.status_menu.set("All")
         self.status_menu.grid(row=0, column=5, padx=(0, 10), pady=10, sticky="ew")
@@ -41,12 +41,8 @@ class FilterPanel(ctk.CTkFrame):
         self.clear_btn.grid(row=0, column=7, padx=(2, 10), pady=10)
 
     def apply_filters(self):
-        filters = {
-            "search": self.search_var.get().strip().lower(),
-            "tag": self.tag_var.get().strip().lower(),
-            "status": self.status_var.get().strip().lower(),
-        }
-        self.on_filter(filters)
+        if self.apply_filters_callback:
+            self.apply_filters_callback()
 
     def clear_filters(self):
         self.search_var.set("")
@@ -54,11 +50,8 @@ class FilterPanel(ctk.CTkFrame):
         self.tag_menu.set("")
         self.status_var.set("All")
         self.status_menu.set("All")
-        self.on_filter({
-            "search": self.search_var.get().strip().lower(),
-            "tag": self.tag_var.get().strip().lower(),
-            "status": self.status_var.get().strip().lower()
-        })
+        if self.clear_callback:
+            self.clear_callback()
 
     def update_tags(self, tags):
         unique_tags = sorted(set(t for t in tags if t.strip()), key=lambda x: x.lower())

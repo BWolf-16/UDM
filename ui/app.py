@@ -1,67 +1,73 @@
-# ui/app.py
 import customtkinter as ctk
+import ctypes
 from ui.device_card import DeviceCard
 from ui.filter_panel import FilterPanel
-from core.device_scanner import get_device_list
+from utils.device_scanner import get_devices
 from utils.storage import load_metadata, save_metadata
 
-card_widgets = []
 
 def launch_app():
-    ctk.set_appearance_mode("dark")
     app = ctk.CTk()
-    app.geometry("1100x800")
     app.title("Ultra Device Manager")
+    app.geometry("1000x750")
+
+    is_admin = ctypes.windll.shell32.IsUserAnAdmin()
+    label = ctk.CTkLabel(app, text="🛡️ Admin Mode: ON" if is_admin else "⚠️ Admin Mode: OFF",
+                         text_color="#00FF99" if is_admin else "#FFCC00",
+                         font=("Segoe UI", 12, "bold"))
+    label.pack(pady=(10, 0))
 
     metadata = load_metadata()
-    devices = get_device_list()
+    all_devices = get_devices()
 
-    filter_frame = ctk.CTkFrame(app)
-    filter_frame.pack(fill='x', padx=10, pady=5)
+    # Frame to hold filters + cards
+    content_frame = ctk.CTkFrame(app)
+    content_frame.pack(expand=True, fill="both", padx=15, pady=10)
 
-    content_frame = ctk.CTkScrollableFrame(app, width=1080, height=660)
-    content_frame.pack(pady=5, padx=10, fill='both', expand=True)
+    # Device card container
+    card_container = ctk.CTkScrollableFrame(content_frame)
+    card_container.pack(fill="both", expand=True, padx=10, pady=10)
 
-    def apply_filters(filters):
-        any_filter = filters['search'] or filters['tag'] or filters['status']
-        for card in card_widgets:
-            name = card.nickname.lower()
-            tag = card.device_meta.get("tag", "").lower()
-            status = card.device['status'].lower()
+    device_cards = []
 
-            match = (
-                (not filters['search'] or filters['search'] in name) and
-                (not filters['tag'] or filters['tag'] in tag) and
-                (filters['status'] == 'all' or filters['status'] in status)
-            )
+    def render_devices(filtered=None):
+        for widget in card_container.winfo_children():
+            widget.destroy()
 
-            if not any_filter or match:
-                card.pack(pady=5, padx=5, fill='x')
-            else:
-                card.pack_forget()
+        shown = filtered if filtered is not None else all_devices
+        sorted_devices = sorted(shown, key=lambda d: d['name'].lower())
 
-    filter_panel = FilterPanel(filter_frame, on_filter=apply_filters)
-    filter_panel.pack(fill='x')
+        for dev in sorted_devices:
+            card = DeviceCard(card_container, dev, metadata,
+                              filter_callback=apply_filters,
+                              tag_update_callback=refresh_tags)
+            card.pack(padx=10, pady=6, fill="x")
+            device_cards.append(card)
 
-    def update_tag_filter():
-        tag_list = [card.device_meta.get("tag", "") for card in card_widgets if card.device_meta.get("tag", "")]
-        if hasattr(filter_panel, "update_tags"):
-            filter_panel.update_tags(tag_list)
+    def refresh_tags():
+        tags = list({metadata[dev['device_id']].get("tag", "") for dev in all_devices if metadata.get(dev['device_id'], {}).get("tag", "")})
+        filter_panel.update_tags(tags)
 
-    for device in devices:
-        card = DeviceCard(
-            content_frame,
-            device,
-            metadata,
-            filter_callback=lambda: apply_filters({
-                'search': filter_panel.search_var.get().strip().lower(),
-                'tag': filter_panel.tag_var.get().strip().lower(),
-                'status': filter_panel.status_var.get().strip().lower(),
-            }),
-            tag_update_callback=update_tag_filter
-        )
-        card.pack(pady=5, padx=5, fill='x')
-        card_widgets.append(card)
+    def apply_filters():
+        search_term = filter_panel.search_entry.get().strip().lower()
+        selected_status = filter_panel.status_var.get()
+        selected_tag = filter_panel.tag_var.get()
 
-    update_tag_filter()
+        def match(dev):
+            name = dev['name'].lower()
+            tag = metadata.get(dev['device_id'], {}).get("tag", "").lower()
+            status = dev['status'].lower()
+
+            return (search_term in name or search_term in tag) and \
+                   (selected_tag == "All" or selected_tag.lower() in tag) and \
+                   (selected_status == "All" or selected_status.lower() in status)
+
+        filtered = [dev for dev in all_devices if match(dev)]
+        render_devices(filtered)
+
+    filter_panel = FilterPanel(app, apply_filters_callback=apply_filters, clear_callback=lambda: render_devices())
+    filter_panel.pack(fill="x", padx=15, pady=(0, 10))
+    refresh_tags()
+    render_devices()
+
     app.mainloop()
