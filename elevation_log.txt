@@ -1,0 +1,19 @@
+[2025-05-29 12:33:20] Not admin. Attempting to relaunch with elevation.
+[2025-05-29 12:33:20] ShellExecuteW returned: 42
+[2025-05-29 12:33:20] Running as admin. Launching app...
+[2025-05-29 12:37:09] Not admin. Attempting to relaunch with elevation.
+[2025-05-29 12:37:10] ShellExecuteW returned: 42
+[2025-05-29 12:37:10] Running as admin. Launching app...
+[2025-05-29 12:41:48] Not admin. Attempting to relaunch with elevation.
+[2025-05-29 12:41:48] ShellExecuteW returned: 42
+[2025-05-29 12:41:48] Running as admin. Launching app...
+[2025-05-29 12:41:48] Exception in launch_app:
+[2025-05-29 12:41:48] Exception: get_devices() got an unexpected keyword argument 'include_hidden'
+[2025-05-29 12:41:57] Not admin. Attempting to relaunch with elevation.
+[2025-05-29 12:41:57] ShellExecuteW returned: 42
+[2025-05-29 12:41:57] Running as admin. Launching app...
+[2025-05-29 12:41:58] Exception in launch_app:
+[2025-05-29 12:41:58] Exception: get_devices() got an unexpected keyword argument 'include_hidden'
+[2025-05-29 12:42:57] Not admin. Attempting to relaunch with elevation.
+[2025-05-29 12:42:57] ShellExecuteW returned: 42
+[2025-05-29 12:42:57] Running as admin. Launching app...
